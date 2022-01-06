@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CustomerSettingAPI.Services;
 
 namespace CustomerSettingAPI
 {
@@ -31,6 +32,7 @@ namespace CustomerSettingAPI
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+            services.AddScoped<ICustomerSettingService, CustomerSettingService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
