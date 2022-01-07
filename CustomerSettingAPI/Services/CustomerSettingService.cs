@@ -17,7 +17,7 @@ namespace CustomerSettingAPI.Services
             _context = context; 
         }
 
-        public async Task<IEnumerable<CustomerSetting>> getAll()
+        public async Task<List<CustomerSetting>> getAll()
         {
             return _context.CustomerSettings.ToList();
         }
