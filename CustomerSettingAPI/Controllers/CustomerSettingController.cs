@@ -21,7 +21,7 @@ namespace CustomerSettingAPI.Controllers
         }
 
         [HttpGet]
-        public Task<IEnumerable<CustomerSetting>> getAll()
+        public Task<List<CustomerSetting>> getAll()
         {
             return _services.getAll();
         }

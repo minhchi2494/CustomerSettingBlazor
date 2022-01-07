@@ -8,6 +8,6 @@ namespace CustomerSettingAPI.Services
 {
     public interface ICustomerSettingService
     {
-        Task<IEnumerable<CustomerSetting>> getAll();
+        Task<List<CustomerSetting>> getAll();
     }
 }
